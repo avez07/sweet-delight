@@ -1,5 +1,5 @@
 [build]
-command = "npm run build"  # This is the build command for the React.js frontend
+command = "npm start"  # This is the build command for the React.js frontend
 publish = "client/build"  # This is the build output directory for the React.js frontend
 
 [functions]
