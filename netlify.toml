@@ -1,0 +1,6 @@
+[build]
+command = "npm run build"  # This is the build command for the React.js frontend
+publish = "client/build"  # This is the build output directory for the React.js frontend
+
+[functions]
+directory = "server"  # This is the directory where your Node.js backend code is located
