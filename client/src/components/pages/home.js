@@ -9,7 +9,7 @@ import sameday from "../assets/same-day.jpg";
 import midnight from "../assets/Midnight-Delivery.jpg";
 import bestseller from "../assets/Bestseller.jpg";
 import newAraival from "../assets/New-Arrival.jpg";
-import aniversary from "../assets/aniversary.jpg";
+import wedding from "../assets/wedding.jpg";
 import birthday from "../assets/Birthday.jpg";
 
 
@@ -27,7 +27,7 @@ function home() {
         <div className="text-center my-4">
           <h3>Flavors Beyond Imagination</h3>
         </div>
-        <div className="mx-4 my-3 bg-light px-4">
+        <div className="mx-4 my-3 bg-light px-4 py-3">
           <Row xs={1} md={2} className="g-4">
             <Col key={6}>
               <Card>
@@ -60,13 +60,33 @@ function home() {
               <Card>
                 <Card.Img variant="top" src={birthday} />
               </Card>
+                <p className="my-2 fw-semibold fs-4 text-center">Birthday</p>
             </Col>
             <Col key={6}>
               <Card>
-                <Card.Img variant="top" src={aniversary} />
+                <Card.Img variant="top" src={wedding} />
               </Card>
+              <p className="my-2 fw-semibold fs-4 text-center">Wedding</p>
+            </Col>           
+          </Row>
+        </div>
+        <div className="text-start my-5 mx-5">
+          <h3>floour blast</h3>
+        </div>
+        <div className="mx-4 my-3 bg-light px-4">
+          <Row xs={1} md={2} className="g-4">
+            <Col key={6}>
+              <Card>
+                <Card.Img variant="top" src={birthday} />
+              </Card>
+                <p className="my-2 fw-semibold fs-4 text-center">Birthday</p>
             </Col>
-           
+            <Col key={6}>
+              <Card>
+                <Card.Img variant="top" src={wedding} />
+              </Card>
+              <p className="my-2 fw-semibold fs-4 text-center">Wedding</p>
+            </Col>           
           </Row>
         </div>
       </Container>
