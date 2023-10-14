@@ -4,7 +4,13 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import carousal_img from "../assets/caurosal/caraosal-imge.jpg";
+import carousal_img_1 from "../assets/caurosal/Diwali_Banner-carosal.jpg";
+import carousal_img_2 from "../assets/caurosal/Diwali-banner_carousal.jpg";
+import carousal_img_3 from "../assets/caurosal/Boss-Day_Desk-carousal.jpg";
+import carousal_img_4 from "../assets/caurosal/Cake-Banner_Desk-carousal.jpg";
+// import carousal_img_5 from "../assets/caurosal/caraosal-imge.jpg";
+
+
 import sameday from "../assets/same-day.jpg";
 import midnight from "../assets/Midnight-Delivery.jpg";
 import bestseller from "../assets/Bestseller.jpg";
@@ -33,11 +39,23 @@ import blue from "../assets/blue.jpg";
 function home() {
   return (
     <>
-      <Container fluid className="px-0 pt-3" style={{ background: "#fff6f7" }}>
+      <Container fluid className="px-0 py-3" style={{ background: "#fff6f7" }}>
         <Carousel className="mt-5">
           <Carousel.Item>
-            <img src={carousal_img} className="img-fluid" alt="" />
+            <img src={carousal_img_1} className="img-fluid" alt="" />
           </Carousel.Item>
+          <Carousel.Item>
+            <img src={carousal_img_2} className="img-fluid" alt="" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img src={carousal_img_3} className="img-fluid" alt="" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img src={carousal_img_4} className="img-fluid" alt="" />
+          </Carousel.Item>
+          {/* <Carousel.Item>
+            <img src={carousal_img_5} className="img-fluid" alt="" />
+          </Carousel.Item> */}
         </Carousel>
 
         <div className="mx-4 my-3 bg-light px-4 py-3">
@@ -206,7 +224,7 @@ function home() {
             </Col>           
           </Row>
         </div>
-        <div className="mx-4 my-3 bg-light py-2 px-4 text-capitalize">
+        <div className="mx-4 mt-3 bg-light py-2 px-4 text-capitalize">
           <div className="text-start py-2 mx-5">
             <h3>color picker</h3>
           </div>

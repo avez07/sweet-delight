@@ -1,0 +1,21 @@
+.carousel-control-prev,.carousel-control-next{
+    display: none;
+}
+.footer-image{
+    background: url('./components/assets/footer-background.jpg');
+    width: 100%;
+    display: flex;
+    padding-top: 100px;
+    padding: 230px 20px 20px 20px;
+}
+.icons{
+    list-style: none;
+    padding: 0;
+}
+.icons li a{
+color: #6e6e6e;
+text-decoration: none;
+}
+.nav_bar{
+    flex-direction: column !important;
+}
