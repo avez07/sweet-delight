@@ -1,21 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
 .carousel-control-prev,.carousel-control-next{
     display: none;
 }
 .footer-image{
-    background: url('./components/assets/footer-background.jpg');
-    width: 100%;
-    display: flex;
     padding-top: 100px;
-    padding: 230px 20px 20px 20px;
 }
 .icons{
     list-style: none;
     padding: 0;
+    width: 100%;
 }
 .icons li a{
 color: #6e6e6e;
 text-decoration: none;
+margin-right: 10px;
 }
 .nav_bar{
     flex-direction: column !important;
+}
+.category{
+    margin-top: 63px;
+}
+.head{
+    font-family: 'Times New Roman', Times, serif !important;
 }

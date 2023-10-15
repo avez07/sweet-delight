@@ -2,18 +2,20 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Nav from "react-bootstrap/Nav";
+import Button from 'react-bootstrap/Button';
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import review_1 from "../assets/review/review-1.jpg";
 import review_2 from "../assets/review/review-2.jpg";
 import review_3 from "../assets/review/review-3.jpg";
 import review_4 from "../assets/review/review-4.jpg";
+import { BsFacebook,BsInstagram,BsTwitter } from 'react-icons/bs';
 
 function footer() {
   return (
-    <Container fluid style={{ background: "#fff6f7" }} className="px-0">
+    <Container fluid style={{ background: "#ffefe8" }} className="px-0">
       <div className="mx-4  px-4 py-3">
-        <div className="text-center my-4 text-capitalize">
+        <div className="text-center my-4 text-capitalize head">
           <h3>Read some of our recent blogs</h3>
         </div>
         <Row xs={2} md={4} className="g-4">
@@ -71,7 +73,8 @@ function footer() {
           </Col>
         </Row>
       </div>
-      <Row xs={2} md={5} className="footer-image g-4">
+      <div>
+      <Row xs={2} md={5} className="footer-image g-4" style={{width:"100%"}}>
         <Col key={1}>
           <h5>logo</h5>
         </Col>
@@ -80,34 +83,19 @@ function footer() {
           <Nav className="ms-auto flex-column nav_bar">
             <NavLink
               to="/"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              About us
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">About us</NavLink>
             <NavLink
               to="/about"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              contact us
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">contact us</NavLink>
             <NavLink
               to="/contact"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              need help
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">need help</NavLink>
             <NavLink
               to="/login"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              blogs
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">blogs</NavLink>
             <NavLink
               to="/signup"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              locate us
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">locate us</NavLink>
           </Nav>
         </Col>
         <Col key={3}>
@@ -115,40 +103,22 @@ function footer() {
           <Nav className="ms-auto flex-column nav_bar">
             <NavLink
               to="/"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              F&Q
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">F&Q</NavLink>
             <NavLink
               to="/about"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              cancellation and refund
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">cancellation and refund</NavLink>
             <NavLink
               to="/contact"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              privarcy policy
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">privarcy policy</NavLink>
             <NavLink
               to="/login"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              term and condition
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">term and condition</NavLink>
             <NavLink
               to="/signup"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              customer
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">customer</NavLink>
             <NavLink
               to="/signup"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              sitemap
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">sitemap</NavLink>
           </Nav>
         </Col>
         <Col key={4}>
@@ -156,54 +126,41 @@ function footer() {
           <Nav className="ms-auto flex-column nav_bar">
             <NavLink
               to="/"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              trending cakes
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">trending cakes</NavLink>
             <NavLink
               to="/about"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              coupon & offer
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">coupon & offer</NavLink>
             <NavLink
               to="/contact"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              francies
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">francies</NavLink>
             <NavLink
               to="/login"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              investor relation
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">investor relation</NavLink>
             <NavLink
               to="/signup"
-              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3"
-            >
-              stamps
-            </NavLink>
+              className="text-muted text-decoration-none fw-semibold fs-6 text-capitalize me-3">stamps</NavLink>
           </Nav>
         </Col>
         <Col key={5}>
           <h5>Know us</h5>
           <ul className="d-flex icons">
             <li>
-              <a href="/link">Click m</a>
+              <a href="/link"><BsFacebook/></a>
             </li>
             <li>
-              <a href="/link">Click m</a>
+              <a href="/link"><BsInstagram/></a>
             </li>
             <li>
-              <a href="/link">Click m</a>
-            </li>
-            <li>
-              <a href="/link">Click m</a>
+              <a href="/link"><BsTwitter/></a>
             </li>
           </ul>
+          <div>
+            <input type="text" placeholder="Email Address" className="form-control" />
+            <Button variant="danger" className="mt-2" style={{width :"100%"}}>Submit</Button>
+          </div>
         </Col>
       </Row>
+      </div>
     </Container>
   );
 }

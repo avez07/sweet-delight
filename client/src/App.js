@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/common/header";
 import Footer from "./components/common/footer";
+import home from "./components/pages/home";
+import category from "./components/pages/category";
 import "./App.css";
 import "./style.css"
-import home from "./components/pages/home";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={home} />
+          <Route  path="/about" component={category} />
+
         </Switch>
         <Footer />
       </Router>

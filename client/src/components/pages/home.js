@@ -39,7 +39,7 @@ import blue from "../assets/blue.jpg";
 function home() {
   return (
     <>
-      <Container fluid className="px-0 py-3" style={{ background: "#fff6f7" }}>
+      <Container fluid className="px-0 py-3" style={{ background: "#ffefe8" }}>
         <Carousel className="mt-5">
           <Carousel.Item>
             <img src={carousal_img_1} className="img-fluid" alt="" />
@@ -63,22 +63,22 @@ function home() {
             <h3>Flavors Beyond Imagination</h3>
           </div>
           <Row xs={1} md={2} className="g-4">
-            <Col key={6}>
+            <Col key={1}>
               <Card>
                 <Card.Img variant="top" src={sameday} />
               </Card>
             </Col>
-            <Col key={6}>
+            <Col key={2}>
               <Card>
                 <Card.Img variant="top" src={midnight} />
               </Card>
             </Col>
-            <Col key={6}>
+            <Col key={3}>
               <Card>
                 <Card.Img variant="top" src={bestseller} />
               </Card>
             </Col>
-            <Col key={6}>
+            <Col key={4}>
               <Card>
                 <Card.Img variant="top" src={newAraival} />
               </Card>
@@ -91,13 +91,13 @@ function home() {
             <h3>Celebrate Special Occasions</h3>
           </div>
           <Row xs={1} md={2} className="g-4">
-            <Col key={6}>
+            <Col key={1}>
               <Card>
                 <Card.Img variant="top" src={birthday} />
               </Card>
               <p className="my-2 fw-semibold fs-4 text-center">Birthday</p>
             </Col>
-            <Col key={6}>
+            <Col key={2}>
               <Card>
                 <Card.Img variant="top" src={wedding} />
               </Card>
@@ -111,7 +111,7 @@ function home() {
             <h3>Flavour blast</h3>
           </div>
           <Row xs={2} md={4} className="g-4">
-            <Col key={3}>
+            <Col key={1}>
               <Card>
                 <Card.Img variant="top" src={chocolate} />
               </Card>
@@ -119,7 +119,7 @@ function home() {
                 chocolate cakes
               </p>
             </Col>
-            <Col key={3}>
+            <Col key={2}>
               <Card>
                 <Card.Img variant="top" src={vanila} />
               </Card>
@@ -133,13 +133,13 @@ function home() {
                 pinapple cakes
               </p>
             </Col>
-            <Col key={3}>
+            <Col key={4}>
               <Card>
                 <Card.Img variant="top" src={truffle} />
               </Card>
               <p className="my-2 fw-semibold fs-5 text-center">truffle cakes</p>
             </Col>
-            <Col key={3}>
+            <Col key={5}>
               <Card>
                 <Card.Img variant="top" src={butterscorh} />
               </Card>
@@ -147,7 +147,7 @@ function home() {
                 butter scorh cakes
               </p>
             </Col>
-            <Col key={3}>
+            <Col key={6}>
               <Card>
                 <Card.Img variant="top" src={redvalvet} />
               </Card>
@@ -155,7 +155,7 @@ function home() {
                 red valvet cakes
               </p>
             </Col>
-            <Col key={3}>
+            <Col key={7}>
               <Card>
                 <Card.Img variant="top" src={blackforest} />
               </Card>
@@ -163,7 +163,7 @@ function home() {
                 black forest cakes
               </p>
             </Col>
-            <Col key={3}>
+            <Col key={8}>
               <Card>
                 <Card.Img variant="top" src={freshfruit} />
               </Card>
@@ -178,7 +178,7 @@ function home() {
             <h3>Explore more</h3>
           </div>
           <Row xs={2} md={3} className="g-4">
-            <Col key={4}>
+            <Col key={1}>
               <Card>
                 <Card.Img variant="top" src={flowerAndcake} />
               </Card>
@@ -186,13 +186,13 @@ function home() {
                 chocolate cakes
               </p>
             </Col>
-            <Col key={4}>
+            <Col key={2}>
               <Card>
                 <Card.Img variant="top" src={creamcake} />
               </Card>
               <p className="my-2 fw-semibold fs-5 text-center">vanila cakes</p>
             </Col>
-            <Col key={4}>
+            <Col key={3}>
               <Card>
                 <Card.Img variant="top" src={fountant} />
               </Card>
@@ -206,7 +206,7 @@ function home() {
               </Card>
               <p className="my-2 fw-semibold fs-5 text-center">photo cakes</p>
             </Col>
-            <Col key={4}>
+            <Col key={5}>
               <Card>
                 <Card.Img variant="top" src={pintacake} />
               </Card>
@@ -214,7 +214,7 @@ function home() {
                 pinta cakes
               </p>
             </Col>
-            <Col key={4}>
+            <Col key={6}>
               <Card>
                 <Card.Img variant="top" src={kids} />
               </Card>
@@ -229,7 +229,7 @@ function home() {
             <h3>color picker</h3>
           </div>
           <Row xs={2} md={4} className="g-4">
-            <Col key={3}>
+            <Col key={1}>
               <Card>
                 <Card.Img variant="top" src={blue} />
               </Card>
@@ -237,7 +237,7 @@ function home() {
                 blue cakes
               </p>
             </Col>
-            <Col key={3}>
+            <Col key={2}>
               <Card>
                 <Card.Img variant="top" src={white} />
               </Card>
@@ -251,7 +251,7 @@ function home() {
                 red cakes
               </p>
             </Col>
-            <Col key={3}>
+            <Col key={4}>
               <Card>
                 <Card.Img variant="top" src={brown} />
               </Card>
