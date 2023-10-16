@@ -14,7 +14,7 @@ function category() {
                 <li><a href="/#">New</a></li>
                 <li><a href="/#">recommond</a></li>
                 <li><a href="/#">price low to high</a></li>
-                <li><a href="/#">price high to low</a></li>
+                <li><a href="/##">price high to low</a></li>
 
             </ul>
           </div>
