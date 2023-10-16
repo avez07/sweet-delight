@@ -1,26 +1,58 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
+import axios from "axios";
 import Container from "react-bootstrap/Container";
 
-function category() {
+function Category() {
+  const [activeItem, setActiveItem] = useState(null);
+
+  const handleItemClick = (index) => {
+    setActiveItem(index);
+  };
+
+ 
+    const [data, setData] = useState([]);
+  
+
   return (
     <>
       <Container fluid className="category" style={{ background: "#ffefe8" }}>
-        <div className="mx-4  px-4 py-3">
-          <div className="text-start my-4 text-capitalize bg-light p-3 head">
+        <div className="mx-4 px-4 py-3">
+          <div className="text-start my-4 text-capitalize bg-light px-3 py-2 head">
             <h3>some cakes</h3>
-          
-            <ul>
-                <li>Sort by:</li>
-                <li><a href="/#">New</a></li>
-                <li><a href="/#">recommond</a></li>
-                <li><a href="/#">price low to high</a></li>
-                <li><a href="/##">price high to low</a></li>
-
+            <ul className="d-flex filters">
+              <li>Sort by:</li>
+              <li
+                className={activeItem === 0 ? "active" : ""}
+                onClick={() => handleItemClick(0)}
+              >
+                New
+              </li>
+              <li
+                className={activeItem === 1 ? "active" : ""}
+                onClick={() => handleItemClick(1)}
+              >
+                Recommond
+              </li>
+              <li
+                className={activeItem === 2 ? "active" : ""}
+                onClick={() => handleItemClick(2)}
+              >
+                Price Low to High
+              </li>
+              <li
+                className={activeItem === 3 ? "active" : ""}
+                onClick={() => handleItemClick(3)}>
+                Price High to Low
+              </li>
             </ul>
+          </div>
+          <div>
+
           </div>
         </div>
       </Container>
     </>
   );
 }
-export default category;
+
+export default Category;

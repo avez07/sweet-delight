@@ -27,3 +27,39 @@ margin-right: 10px;
 .head{
     font-family: 'Times New Roman', Times, serif !important;
 }
+.filters{
+    list-style: none;
+    padding: 0;
+}
+.filters li {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #1c1c1c;
+    padding: 2px 5px;
+    display: block;
+    cursor: pointer;
+    position: relative; /* Add this */
+}
+
+.filters li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #d76957;
+    transition: transform .3s, width .3s; /* Add transform property */
+    transform-origin: 50%; /* Set transform origin to center */
+    position: absolute; /* Position the ::after element relative to its parent */
+    bottom: 0; /* Adjust this if needed to position the line properly */
+    left: 50%; /* Move the line to the center horizontally */
+}
+
+.filters li:hover::after:not(.active) {
+    width: 100%;
+    transform: translateX(-50%); /* Move it back to the center */
+}
+
+.filters li.active {
+    color: #d76957 !important;
+    border-bottom: 2px solid #d76957;
+}
