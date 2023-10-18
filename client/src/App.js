@@ -4,22 +4,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/common/header";
 import Footer from "./components/common/footer";
 import home from "./components/pages/home";
-import category from "./components/pages/category";
+import Category from "./components/pages/category";
+import Login from "./components/authentication/login";
 import "./App.css";
 import "./style.css"
 
 function App() {
   return (
     <>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={home} />
-          <Route  path="/about" component={category} />
-
-        </Switch>
-        <Footer />
-      </Router>
+       <Router>
+      <Switch>
+        <Route exact path="/login" component={Login} />
+        <Route>
+          <div>
+            <Header />
+            <Switch>
+              <Route exact path="/" component={home} />
+              <Route path="/about" component={Category} />
+            </Switch>
+            <Footer />
+          </div>
+        </Route>
+      </Switch>
+    </Router>
     </>
   );
 }
