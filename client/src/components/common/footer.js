@@ -13,7 +13,7 @@ import { BsFacebook,BsInstagram,BsTwitter } from 'react-icons/bs';
 
 function footer() {
   return (
-    <Container fluid style={{ background: "#ffefe8" }} className="px-0">
+    <Container fluid style={{ background: "#f7f0f1" }} className="px-0">
       <div className="mx-4  px-4 py-3">
         <div className="text-center my-4 text-capitalize head">
           <h3>Read some of our recent blogs</h3>
@@ -156,7 +156,7 @@ function footer() {
           </ul>
           <div>
             <input type="text" placeholder="Email Address" className="form-control" />
-            <Button variant="danger" className="mt-2" style={{width :"100%"}}>Submit</Button>
+            <Button variant="danger" className="mt-2" style={{width :"100%",background:"darkred"}}>Submit</Button>
           </div>
         </Col>
       </Row>

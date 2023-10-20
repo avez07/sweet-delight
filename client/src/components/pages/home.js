@@ -39,8 +39,8 @@ import blue from "../assets/blue.jpg";
 function home() {
   return (
     <>
-      <Container fluid className="px-0 py-3" style={{ background: "#ffefe8" }}>
-        <Carousel className="mt-5">
+      <Container fluid className="px-0 py-3" style={{ background: "#f7f0f1" }}>
+        <Carousel className="mt-4">
           <Carousel.Item>
             <img src={carousal_img_1} className="img-fluid" alt="" />
           </Carousel.Item>
@@ -107,7 +107,7 @@ function home() {
         </div>
 
         <div className="mx-4 my-3 bg-light py-2 px-4 text-capitalize">
-          <div className="text-start py-2 mx-5">
+          <div className="text-start py-2">
             <h3>Flavour blast</h3>
           </div>
           <Row xs={2} md={4} className="g-4">
