@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 
-function FormGroupExample() {
+function Login() {
   return (
     <Container fluid>
       <div
@@ -27,4 +27,4 @@ function FormGroupExample() {
   );
 }
 
-export default FormGroupExample;
+export default Login;

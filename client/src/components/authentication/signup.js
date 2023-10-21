@@ -12,7 +12,7 @@ function Signup() {
           <Form>
             <h5>signup</h5>
             <Form.Group className="mb-3" controlId="formGroupEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Name</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formGroupEmail">
