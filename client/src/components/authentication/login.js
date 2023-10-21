@@ -1,38 +1,30 @@
-import React, { useState } from 'react';
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 
-function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email+'=>'+password)
-  };
-
+function FormGroupExample() {
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h2 className="login-heading">Welcome Back!</h2>
-        <form onSubmit={handleSubmit} className="login-form">
-          <input
-            type="text"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit" className="login-button">
-            Login
-          </button>
-        </form>
+    <Container fluid>
+      <div
+        className="d-flex justify-content-center align-items-center authentication"
+        style={{ height: "100vh" }}>
+        <div className="authentication_border">
+          <Form>
+            <h5>Login</h5>
+            <Form.Group className="mb-3" controlId="formGroupEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formGroupPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+              <Button className="mt-2" type="submit">Submit</Button>
+            </Form.Group>
+          </Form>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
-export default Login;
+export default FormGroupExample;

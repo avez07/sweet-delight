@@ -6,6 +6,7 @@ import Footer from "./components/common/footer";
 import home from "./components/pages/home";
 import Category from "./components/pages/category";
 import Login from "./components/authentication/login";
+import Signup from "./components/authentication/signup";
 import "./App.css";
 import "./style.css"
 
@@ -15,6 +16,8 @@ function App() {
        <Router>
       <Switch>
         <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+
         <Route>
           <div>
             <Header />
