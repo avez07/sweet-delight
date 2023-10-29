@@ -1,10 +1,11 @@
 import express from "express";
-import dotenv from "dotenv";
 import Auth from "../V2/app/Controller/AuthController.js"
+import dotenv from "dotenv";
 const app = express();
+app.use(express.json());
 const router = express.Router();
 dotenv.config();
-app.use(express.json());
 
-router.post('/login',Auth)
+router.get('/login',Auth.addData)
+
 export default router
