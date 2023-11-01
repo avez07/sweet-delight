@@ -2,24 +2,34 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-// import bcrypt from "bcrypt";
+import axios from "axios";
 
 function Login() {
   const [username,setUsername] = useState(null)
   const [password,setPassword] = useState(null)
-  const handleItems = ()=>{
-    
-    // bcrypt.hash(password,10,(err,hash)=>{
-    //   if(err){
-    //     console.log(err);
-    //   }else{
-       
-    //   }
-    // })
-    sessionStorage.setItem('username',username);
-        sessionStorage.setItem('password',password)
+ 
+    const handleItems = async (e)=>{
+      e.preventDefault();
+   try {
+    const apiUrl = 'http://localhost:5500/api/login';
+    const header =  {
+      'Content-Type': 'application/json',
+    };
+    const data ={
+      email: username,
+      password:password
+    }
+    const response = await axios.post(apiUrl,data,{header})
+    if (response.status === 200){
+      console.log(response.data[0].name);
+    }
+   } catch (error) {
+    console.log(error);
+   }
    
-  }
+    }
+  
+ 
   return (
     <Container fluid>
       <div
