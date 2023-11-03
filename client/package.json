@@ -17,9 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "CI= react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-dotenv && react-scripts start",
+    "build": "react-dotenv && CI= react-scripts build",
+    "test": "react-dotenv && react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "react-dotenv": "^0.1.3"
   }
 }

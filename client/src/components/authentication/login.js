@@ -7,14 +7,17 @@ import axios from "axios";
 function Login() {
   const [username,setUsername] = useState(null)
   const [password,setPassword] = useState(null)
- 
+  console.log(process.env.REACT_APP_SECRET_KEY)
+
     const handleItems = async (e)=>{
       e.preventDefault();
    try {
     const apiUrl = 'http://localhost:5500/api/login';
     const header =  {
       'Content-Type': 'application/json',
+      'Authorization': process.env.REACT_APP_SECRET_KEY
     };
+    
     const data ={
       email: username,
       password:password

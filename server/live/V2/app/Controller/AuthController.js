@@ -5,6 +5,8 @@ const app = express();
 
 const login = async (req, res) => {
   const data = req.body;
+  const head = req.headers;
+  console.log(head); return false
 
   try {
     const collection = db.collection('user_login');
