@@ -7,7 +7,7 @@ import axios from "axios";
 function Login() {
   const [username,setUsername] = useState(null)
   const [password,setPassword] = useState(null)
-  console.log(process.env.REACT_APP_SECRET_KEY)
+  // console.log(process.env.REACT_APP_SECRET_KEY)
 
     const handleItems = async (e)=>{
       e.preventDefault();
@@ -22,7 +22,8 @@ function Login() {
       email: username,
       password:password
     }
-    const response = await axios.post(apiUrl,data,{header})
+    const response = await axios.post(apiUrl,data,{
+      headers: header})
     if (response.status === 200){
       console.log(response.data[0].name);
     }
