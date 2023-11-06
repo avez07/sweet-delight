@@ -1,19 +1,23 @@
-import React  from "react";
+import React, { useContext }  from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {AuthContext} from "./components/authentication/auth";
 import Header from "./components/common/header";
 import Footer from "./components/common/footer";
 import home from "./components/pages/home";
 import Category from "./components/pages/category";
 import Login from "./components/authentication/login";
 import Signup from "./components/authentication/signup";
+import Page from "./components/admin/pages";
 import "./App.css";
 import "./style.css";
 
 
 function App() {
-  
-  const loginID = 1;
+  const { isAuthenticated } = useContext(AuthContext);
+//  useEffect(()=>{
+// console.log("1234")
+//  })
   return (
     <>
       <Router>
@@ -21,25 +25,21 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route>
-            {loginID === 1 ? (
+            {isAuthenticated ? (
               <div>
-                {/* Different routes and components for login ID 1 */}
                 <Header />
                 <Switch>
-                  <Route exact path="/" component={home} />
+                  <Route exact path="/" component={Page} />
                   <Route path="/about" component={Category} />
-                  {/* Add more routes specific to login ID 1 if needed */}
                 </Switch>
                 <Footer />
               </div>
             ) : (
               <div>
-                {/* Routes and components for other login IDs */}
                 <Header />
                 <Switch>
                   <Route exact path="/" component={home} />
                   <Route path="/about" component={Category} />
-                  {/* Add more routes for other login IDs if needed */}
                 </Switch>
                 <Footer />
               </div>
