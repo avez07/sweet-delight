@@ -1,7 +1,7 @@
 window.env = {
   "ALLUSERSPROFILE": "C:\\ProgramData",
   "APPDATA": "C:\\Users\\AgronIT\\AppData\\Roaming",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_9988_VPVJCTSMCPYZETMO",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_9880_YIVJFVLOZRKZHJXU",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "CommonProgramFiles": "C:\\Program Files\\Common Files",
@@ -64,6 +64,7 @@ window.env = {
   "PSModulePath": "C:\\Users\\AgronIT\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
   "PUBLIC": "C:\\Users\\Public",
   "REACT_APP_SECRET_KEY": "1234",
+  "REACT_APP_URL": "http://localhost:5500/",
   "SESSIONNAME": "Console",
   "SystemDrive": "C:",
   "SystemRoot": "C:\\WINDOWS",
@@ -80,6 +81,6 @@ window.env = {
   "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\AgronIT\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
   "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-4f380b938a-sock",
   "VSCODE_INJECTION": "1",
-  "VSCODE_NONCE": "d0adbf22-668b-473d-92dd-e56d80535f2c",
+  "VSCODE_NONCE": "3d0ba7cb-92fa-412c-976f-ec57730063df",
   "windir": "C:\\WINDOWS"
 };

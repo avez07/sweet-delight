@@ -25,5 +25,9 @@ const login = async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 };
+const verify_token = (req,res)=>{
+  const  data = req.body;
+ res.status(200).send(data)
+}
 
-export default { login };
+export default { login , verify_token};

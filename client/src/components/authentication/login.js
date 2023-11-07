@@ -7,12 +7,12 @@ import axios from "axios";
 function Login() {
   const [username,setUsername] = useState(null)
   const [password,setPassword] = useState(null)
-  // console.log(process.env.REACT_APP_SECRET_KEY)
+  console.log(process.env.REACT_APP_URL)
 
     const handleItems = async (e)=>{
       e.preventDefault();
    try {
-    const apiUrl = 'http://localhost:5500/api/login';
+    const apiUrl = process.env.REACT_APP_URL + 'api/login';
     const header =  {
       'Content-Type': 'application/json',
       'Authorization': process.env.REACT_APP_SECRET_KEY
@@ -25,7 +25,8 @@ function Login() {
     const response = await axios.post(apiUrl,data,{
       headers: header})
     if (response.status === 200){
-      console.log(response.data[0].name);
+      console.log(response.data)
+     localStorage.setItem('token',response.data)
     }
    } catch (error) {
     console.log(error);

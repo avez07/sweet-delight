@@ -6,5 +6,7 @@ const router = express.Router();
 // dotenv.config();
 
 router.post('/login',Auth.login)
+router.get('/verify',Auth.verify_token)
+
 
 export default router
