@@ -17,7 +17,7 @@ const login = async (req, res) => {
       login_id: response[0].login_id,
       role: response[0].role,
     };
-    const JWTToken = Jwt.sign(response_data, serect_key, { expiresIn: 300 });
+    const JWTToken = Jwt.sign(response_data, serect_key, { expiresIn: 86400 });
     res.status(200).send(JWTToken);
   } catch (error) {
     console.error("Error while accessing the database:", error);
@@ -26,9 +26,18 @@ const login = async (req, res) => {
 };
 const verify_token = async (req, res) => {
   const data = req.headers.authorization;
-  const response = Jwt.verify(data, serect_key, true);
+  try {
+    const response = Jwt.verify(data, serect_key, true);
+    res.status(200).send(response);
 
-  res.status(200).send(response);
+  } catch (error) {
+    if (error.name === 'TokenExpiredError') {
+      res.status(201).send("Token Expired");    
+    } else {     
+      res.status(201).send("Token Not Valid");
+
+    }
+  }
 };
 
 export default { login, verify_token };
