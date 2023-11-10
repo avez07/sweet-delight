@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {AuthContext} from "./components/authentication/auth";
 import Header from "./components/common/header";
 import Footer from "./components/common/footer";
+import AdminHeader from './components/admin/header'
 import home from "./components/pages/home";
 import Category from "./components/pages/category";
 import Login from "./components/authentication/login";
@@ -11,6 +12,7 @@ import Signup from "./components/authentication/signup";
 import Page from "./components/admin/pages";
 import "./App.css";
 import "./style.css";
+// import Layout from "./components/admin/layout";
 
 
 function App() {
@@ -27,7 +29,7 @@ function App() {
           <Route>
             {isAuthenticated ? (
               <div>
-                <Header />
+                <AdminHeader />
                 <Switch>
                   <Route exact path="/" component={Page} />
                   <Route path="/about" component={Category} />
