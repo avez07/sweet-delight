@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import AdminHeader from "../common/admin-header";
-import Sidebar from "../common/admin-sidebar";
+import AdminHeader from "./admin-header";
+import Sidebar from "./admin-sidebar";
 import "../../style.css";
 
 function Layout({ children }) {

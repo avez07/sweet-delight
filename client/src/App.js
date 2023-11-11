@@ -10,7 +10,7 @@ import Login from "./components/authentication/login";
 import Signup from "./components/authentication/signup";
 import "./App.css";
 import "./style.css";
-import Layout from "./components/admin/pages";
+import Layout from "./components/common/admin-layout";
 
 function App() {
   const { isAuthenticated } = useContext(AuthContext);
