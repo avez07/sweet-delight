@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
       setIsAuthenticated(null);
       setName(null)
       setEmail(null)
-      setIsAuthenticated(null);
+      setIsAuthenticated(3);
       setLogin_id(null)
     }
   };

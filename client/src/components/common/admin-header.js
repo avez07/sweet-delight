@@ -1,58 +1,37 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import './App.css'; // Import your CSS file for custom styling
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../assets/wesite-logo.png';
 
-function OffCanvasExample({ name, ...props }) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  return (
-    <>
-      <Button variant="primary" onClick={handleShow} className="me-2">
-        {name}
-      </Button>
-      <Offcanvas show={show} onHide={handleClose} placement="start" {...props}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as a placeholder. In real life, you can have the elements you have chosen. Like text, images, lists, etc.
-        </Offcanvas.Body>
-      </Offcanvas>
-    </>
+function BasicExample() {
+  return (    
+    <Navbar expand="lg" className="bg-body-tertiary admin-navbar">
+      <Container fluid>
+        <Navbar.Brand href="/">
+          <span>
+            <img src={logo} alt="" className='img-fluid website-logo' />
+          </span>
+        </Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#link">Link</Nav.Link>
+          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 }
 
-function Sidebar() {
-  return (
-    <div className="sidebar">
-      <Example />
-    </div>
-  );
-}
-
-function Example() {
-  return (
-    <div>
-      {['start', 'end', 'top', 'bottom'].map((placement, idx) => (
-        <OffCanvasExample key={idx} name={placement} />
-      ))}
-    </div>
-  );
-}
-
-function App() {
-  return (
-    <div className="app">
-      <Sidebar />
-      <div className="content">
-        <Example />
-      </div>
-    </div>
-  );
-}
-
-export default App;
+export default BasicExample;

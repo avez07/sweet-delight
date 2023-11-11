@@ -90,4 +90,38 @@ margin-right: 10px;
     border-bottom: 2px solid #d76957;
 }
 
+/* admin dashboard */
+.pro-sidebar{
+    position: fixed !important;
+    top: 0;
+    width: 240px !important;
+    min-width: 60px !important;
+    overflow: hidden;
   
+  }
+  .box-data{
+    position: relative;
+    float: right;
+    width: calc(100% - 243px);
+    /* border: 1.5px solid black; */
+    min-height: 100vhh;
+    
+  }
+  .website-logo{   
+        height: 65px;
+        width: auto;
+        border-radius: 50%;
+        background: white;
+        padding: 4px;
+  }
+  .content{
+    margin: 10px;
+    border-radius: 5px;
+    min-height: 83vh;
+    margin-top: 100px;
+    box-shadow: 6px 6px 20px #cfcfcf;
+  }
+  .admin-navbar{
+    position: fixed;
+    width: 100%;
+  }
