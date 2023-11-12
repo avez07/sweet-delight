@@ -3,18 +3,20 @@ import { NavLink } from "react-router-dom";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { AuthContext } from "../authentication/auth";
+import logo from "../assets/wesite-logo.png";
+
 import { FaHome } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   const { name } = useContext(AuthContext);
 
   return (
     <>
-      <ProSidebar>
-    <h3 className="text-capitalize">Hello {name}</h3>
+      <ProSidebar collapsed={!isOpen}>
+    <div className="mt-4"><img src={logo} alt="website-logo" className="website-logo" /><span className="website-name">Sweet delight</span></div>
         <Menu iconShape="square">
           <MenuItem>
-            <NavLink to="/sample"><FaHome/> Home</NavLink>
+            <NavLink to="/sample"><span className="menu-items"><FaHome/></span> Home</NavLink>
           </MenuItem>
           <MenuItem>
             <NavLink to="/">Product Details</NavLink>

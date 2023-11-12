@@ -94,32 +94,33 @@ margin-right: 10px;
 .pro-sidebar{
     position: fixed !important;
     top: 0;
-    width: 240px !important;
+    width: 240px !important;    
     min-width: 60px !important;
     overflow: hidden;
+    transition: width 0.3s ease !important;
+    background: #f8f9fa;
   
+  }
+  .pro-sidebar.collapsed {
+    width: 60px !important;
   }
   .box-data{
     position: relative;
     float: right;
-    width: calc(100% - 243px);
+    width: calc(100% - 240px);
+    transition: width 0.3s ease !important;
     /* border: 1.5px solid black; */
     min-height: 100vhh;
     
   }
-  .website-logo{   
-        height: 65px;
-        width: auto;
-        border-radius: 50%;
-        background: white;
-        padding: 4px;
-  }
+ 
   .content{
     margin: 10px;
     border-radius: 5px;
     min-height: 83vh;
     margin-top: 100px;
     box-shadow: 6px 6px 20px #cfcfcf;
+    background: currentColor;
   }
   .admin-navbar{
     position: fixed;
