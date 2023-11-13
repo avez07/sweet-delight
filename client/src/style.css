@@ -119,8 +119,8 @@ margin-right: 10px;
     border-radius: 5px;
     min-height: 83vh;
     margin-top: 100px;
-    box-shadow: 6px 6px 20px #cfcfcf;
-    background: currentColor;
+    /* box-shadow: 6px 6px 20px #cfcfcf; */
+    background: white;
   }
   .admin-navbar{
     position: fixed;

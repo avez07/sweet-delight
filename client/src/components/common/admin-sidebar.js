@@ -1,14 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import { AuthContext } from "../authentication/auth";
 import logo from "../assets/wesite-logo.png";
 
-import { FaHome } from "react-icons/fa";
+import { FaHome,FaBoxOpen,FaCartPlus,FaUserFriends } from "react-icons/fa";
+import { RiFilePaper2Fill } from "react-icons/ri";
+
 
 const Sidebar = ({ isOpen }) => {
-  const { name } = useContext(AuthContext);
 
   return (
     <>
@@ -19,16 +19,16 @@ const Sidebar = ({ isOpen }) => {
             <NavLink to="/sample"><span className="menu-items"><FaHome/></span> Home</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/">Product Details</NavLink>
+            <NavLink to="/"><span className="menu-items"><FaBoxOpen/></span>Product Details</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/">Order Details</NavLink>
+            <NavLink to="/"><span className="menu-items"><FaCartPlus/></span>Order Details</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/">Seller Details</NavLink>
+            <NavLink to="/"><span className="menu-items"><FaUserFriends/></span>Seller Details</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/">Billing</NavLink>
+            <NavLink to="/"><span className="menu-items"><RiFilePaper2Fill/></span>Billing</NavLink>
           </MenuItem>
         </Menu>
       </ProSidebar>

@@ -11,6 +11,7 @@ import Signup from "./components/authentication/signup";
 import "./App.css";
 import "./style.css";
 import Layout from "./components/common/admin-layout";
+import AdminHome from "./components/admin/home";
 
 function App() {
   const { isAuthenticated } = useContext(AuthContext);
@@ -24,9 +25,8 @@ function App() {
           <Route>
             {isAuthenticated === 1 ? (
               <Layout>
-                {/* <Sidebar /> */}
                 <Switch>
-                  <Route path="/" component={Category} />
+                  <Route path="/" component={AdminHome} />
                 </Switch>
               </Layout>
             ) : isAuthenticated === 3 ? (
