@@ -8,12 +8,12 @@ import { FaHome,FaBoxOpen,FaCartPlus,FaUserFriends } from "react-icons/fa";
 import { RiFilePaper2Fill } from "react-icons/ri";
 
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen ,isNightMode}) => {
 
   return (
     <>
-      <ProSidebar collapsed={!isOpen}>
-    <div className="mt-4"><img src={logo} alt="website-logo" className="website-logo" /><span className="website-name">Sweet delight</span></div>
+      <ProSidebar collapsed={!isOpen} className={`${isNightMode ?'pro-sidebar-night':'pro-sidebar-day'}`}>
+    <div className={`${isNightMode?'website-web':'mt-4'}`}><img src={logo} alt="website-logo" className="website-logo" /><span className="website-name">Sweet delight</span></div>
         <Menu iconShape="square">
           <MenuItem>
             <NavLink to="/sample"><span className="menu-items"><FaHome/></span> Home</NavLink>

@@ -8,8 +8,8 @@ import home from "./components/pages/home";
 import Category from "./components/pages/category";
 import Login from "./components/authentication/login";
 import Signup from "./components/authentication/signup";
-import "./App.css";
-import "./style.css";
+import "../src/css/App.css";
+import "../src/css/style.css";
 import Layout from "./components/common/admin-layout";
 import AdminHome from "./components/admin/home";
 

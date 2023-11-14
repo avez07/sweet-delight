@@ -124,5 +124,6 @@ margin-right: 10px;
   }
   .admin-navbar{
     position: fixed;
-    width: 100%;
+    width: -webkit-fill-available !important;
+    z-index: 1;
   }

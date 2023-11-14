@@ -13,7 +13,7 @@ nav{
     height: 62px;
 }
 .pro-sidebar > .pro-sidebar-inner{
-    background: #362465;
+    background: #362465 !important;
     border-radius: 0 86px 0 0;
 }
 .pro-sidebar-layout{
@@ -76,3 +76,28 @@ nav{
     margin: 0 7px; 
     vertical-align: middle;
   }
+  .night-mode{
+    background: #0c1220 !important;
+    color: #b8bbc3;
+  }
+.night-mode-nav{
+    background: #0c1220 !important;
+    color: #b8bbc3 !important;
+    border-bottom: 3px solid #1a202e
+}
+.pro-sidebar-night,.pro-sidebar-night>.pro-sidebar-inner{
+    background: #0c1220 !important;
+    
+}
+.pro-sidebar-night{
+    border-right: 3px solid #1a202e !important;
+}
+.website-web{
+    margin-top: 3.5px;
+    border-bottom: 3px solid #1a202e
+}
+.searh-night,.searh-night::placeholder{
+    background: #1a202e!important;
+    border: none !important;
+    color: #b8bbc3!important;
+}
