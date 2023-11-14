@@ -26,7 +26,7 @@ const options = {
   outerHeight : 1400
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July','Aug','Sept','Oct','Nov','Dec'];
 
 // Manually create sample data
 const data = {
@@ -34,12 +34,12 @@ const data = {
   datasets: [
     {
       label: 'Dataset 1',
-      data: [400, 300, 600, 200, 800, 700, 500], // Manually set data points
+      data: [400, 300, 600, 200, 800, 700, 500,400,300,600,800,200], // Manually set data points
       backgroundColor: 'rgba(255, 99, 132, 0.8)',
     },
     {
       label: 'Dataset 2',
-      data: [700, 500, 300, 600, 400, 200, 900], // Manually set data points
+      data: [700, 500, 300, 600, 400, 200, 900,300,600,500,300,300], // Manually set data points
       backgroundColor: 'rgba(53, 162, 235, 0.8)',
     },
   ],
