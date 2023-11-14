@@ -46,8 +46,8 @@ function AdminNav({ toggleSidebar,toggleNightMode,isNightMode }) {
           <NavDropdown
             id="nav-dropdown-dark-example"
             menuVariant={`${isNightMode?'dark':'light'}`}
-            className="language-logo"
-            title={<div className="me-auto fw-semibold"><span className="fs-4"><IoLanguageSharp /></span>EN</div>}>
+            className={`language-logo ${isNightMode?'laguage-logo-night':''}`}
+            title={<div className="me-auto fw-semibol"><span className="fs-4"><IoLanguageSharp /></span>EN</div>}>
             <NavDropdown.Item href="#action/3.1">Englisg</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">हिंदी</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">française</NavDropdown.Item>

@@ -127,3 +127,24 @@ margin-right: 10px;
     width: -webkit-fill-available !important;
     z-index: 1;
   }
+  .f-card-tittle{
+    font-size: 30px;
+    font-weight: 500;    
+  }
+  .sub-tittle{
+    margin-left: 48px;
+    font-size: 15px;
+    color: #0a0a0a;
+    font-weight: 700;
+  }
+  .piechart{
+    height: 300px;
+    width: auto;
+    float: right;
+  }
+  .chart-container .chartjs-render-monitor ul.legend-list li span.chart-legend {
+    width: 8px !important; /* Adjust the width to make the legend points smaller */
+    height: 8px !important; /* Adjust the height to make the legend points smaller */
+  }
+  
+ 

@@ -101,3 +101,27 @@ nav{
     border: none !important;
     color: #b8bbc3!important;
 }
+.laguage-logo-night a div , .laguage-logo-night a::after{
+    color:#b8bbc3 !important;
+}
+.content-night{
+    background: #0c1220;
+}
+.content-night .card{
+    background-color: #242937a9;
+    box-shadow: 0 3px 5px 0.3px #0000001a;
+    backdrop-filter: blur(15px) !important;
+    color:#b8bbc3
+}
+.content-night .card  .f-card-tittle{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    
+  }
+  .content-night .card  .sub-tittle{
+color: #b8bbc3;
+font-size: 15px;
+  }
+
+

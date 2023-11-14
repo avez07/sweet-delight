@@ -25,7 +25,7 @@ setisNightMode(!isNightMode)
       <Container fluid className={`p-0 ${!isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
         <div className={`box-data ${isNightMode?'night-mode':''}`} style={{ width: boxDataWidth }}>
           <AdminNav toggleSidebar={toggleSidebar} toggleNightMode={NightMode} isNightMode={isNightMode}/>
-          <div className="content">
+          <div className={`content ${isNightMode?'content-night':''}`}>
             {children}
           </div>
         </div>
