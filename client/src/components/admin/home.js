@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +10,8 @@ import default_img from "../assets/Default_pfp.svg.png";
 import Piechart from "./pie-chart/home-pie";
 import BarChart from "./pie-chart/bar-chart";
 import LineChart from "./pie-chart/line-chart";
+import { FaGlobeAmericas,FaShoppingCart } from "react-icons/fa";
+import { MdOtherHouses } from "react-icons/md";
 
 function AdminHome() {
   const { name } = useContext(AuthContext);
@@ -51,15 +54,13 @@ function AdminHome() {
           </Card>
         </Col>
         <Col key={2}>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
+          <Card className=" progress-div">
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
+              <Card.Title>Mothly selles</Card.Title>
+             <div className="website-progress"><span className="website-progres-icon"><FaGlobeAmericas /></span> <ProgressBar variant="success" now={60} /><span>50569</span></div>
+             <div className="branch-progress"> <span className="branch-progres-icon"><FaShoppingCart /></span><ProgressBar variant="success" now={20} /><span>505</span></div>
+             <div className="other-progress"> <span className="other-progres-icon"><MdOtherHouses/></span> <ProgressBar variant="success" now={35} /><span>5</span></div>
+
             </Card.Body>
           </Card>
         </Col>      

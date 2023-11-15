@@ -77,7 +77,6 @@ nav{
     vertical-align: middle;
   }
   .night-mode{
-    background: #0c1220 !important;
     color: #b8bbc3;
   }
 .night-mode-nav{
@@ -105,12 +104,14 @@ nav{
     color:#b8bbc3 !important;
 }
 .content-night{
-    background: #0c1220;
+    background: #0c1220 url('../components/assets/transparent-backgroung.png') no-repeat center center fixed !important;
+    background-size: cover;
+
 }
 .content-night .card{
-    background-color: #242937a9;
+    background-color: #24293726;
     box-shadow: 0 3px 5px 0.3px #0000001a;
-    backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(8px) !important;
     color:#b8bbc3
 }
 .content-night .card  .f-card-tittle{
@@ -123,5 +124,43 @@ nav{
 color: #b8bbc3;
 font-size: 15px;
   }
-
+  .website-progress,.branch-progress,.other-progress{
+    margin: 20px 0;
+    padding: 20px;
+    border: 1.5px solid #b8bbc3;
+    background-color: #ffffff;
+}
+ .content-night .website-progress,.content-night .branch-progress,.content-night .other-progress{
+    margin: 20px 0;
+    padding: 20px;
+    border:none;
+    border-radius: 7px;
+    background-color: #2429373e;
+    box-shadow: 0 3px 5px 0.3px #0000001a;
+    backdrop-filter: blur(8px) !important;
+    color:#b8bbc3
+}
+.website-progress,.branch-progress,.other-progress{
+    margin: 20px 0;
+    padding: 20px;
+    border:1px solid #a4a7ad66;
+    border-radius: 7px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.content-night .website-progress .progress,.content-night .branch-progress .progress,.content-night .other-progress .progress{
+    background: #a4a7ad66;
+}
+.website-progress .progress,.branch-progress .progress,.other-progress .progress{
+    height: 6px;
+    width: 80%;
+}
+.website-progress  .progress-bar{ background: #b82842 !important;} .branch-progress .progress-bar{ background: #541b87 !important;} .other-progress .progress-bar{ background: #1c851c !important;}
+.progress-div{
+    border: none !important;
+    background: transparent;
+    backdrop-filter: blur(0px);
+}
+.website-progres-icon svg{color: #b82842a5; font-size: 29px;} .branch-progres-icon svg{color: #541b87; font-size: 29px;} .other-progres-icon svg{color: #1c851c; font-size: 29px;}
 
