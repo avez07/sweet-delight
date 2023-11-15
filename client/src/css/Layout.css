@@ -153,14 +153,14 @@ font-size: 15px;
     background: #a4a7ad66;
 }
 .website-progress .progress,.branch-progress .progress,.other-progress .progress{
-    height: 6px;
+    height: 7px;
     width: 80%;
 }
-.website-progress  .progress-bar{ background: #b82842 !important;} .branch-progress .progress-bar{ background: #541b87 !important;} .other-progress .progress-bar{ background: #1c851c !important;}
+.website-progress  .progress-bar{ background: #ffa1b5 !important;} .branch-progress .progress-bar{ background: #541b87 !important;} .other-progress .progress-bar{ background: #1c851c !important;}
 .progress-div{
     border: none !important;
     background: transparent;
     backdrop-filter: blur(0px);
 }
-.website-progres-icon svg{color: #b82842a5; font-size: 29px;} .branch-progres-icon svg{color: #541b87; font-size: 29px;} .other-progres-icon svg{color: #1c851c; font-size: 29px;}
+.website-progres-icon svg{color: #ffa1b5; font-size: 29px;} .branch-progres-icon svg{color: #541b87; font-size: 29px;} .other-progres-icon svg{color: #1c851c; font-size: 29px;}
 

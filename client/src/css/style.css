@@ -116,8 +116,7 @@ margin-right: 10px;
  
   .content{
     padding: 10px;
-    border-radius: 5px;
-    min-height: 83vh;
+    min-height: 100vh;
     padding-top: 100px;
     /* box-shadow: 6px 6px 20px #cfcfcf; */
     background: white;

@@ -16,10 +16,10 @@ const Sidebar = ({ isOpen ,isNightMode}) => {
     <div className={`${isNightMode?'website-web':'mt-4'}`}><img src={logo} alt="website-logo" className="website-logo" /><span className="website-name">Sweet delight</span></div>
         <Menu iconShape="square">
           <MenuItem>
-            <NavLink to="/sample"><span className="menu-items"><FaHome/></span> Home</NavLink>
+            <NavLink to="/"><span className="menu-items"><FaHome/></span> Home</NavLink>
           </MenuItem>
           <MenuItem>
-            <NavLink to="/"><span className="menu-items"><FaBoxOpen/></span>Product Details</NavLink>
+            <NavLink to="/product"><span className="menu-items"><FaBoxOpen/></span>Product Details</NavLink>
           </MenuItem>
           <MenuItem>
             <NavLink to="/"><span className="menu-items"><FaCartPlus/></span>Order Details</NavLink>
