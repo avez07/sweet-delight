@@ -7,34 +7,34 @@ const handleClick = (title) => {
 export const columns = [
   {
     name: "Title",
-    selector: "title",
+    selector: (row)=>row.title,
     sortable: true
   },
   {
     name: "Director",
-    selector: "director",
+    selector: (row)=>row.director,
     sortable: true,
     cell: (d) => (
-      <a href="https://google.com" target="_blank" className="dlink">
+      <a href="https://google.com" target="_blank" rel="noreferrer" className="dlink">
         {d.director}
       </a>
     )
   },
   {
     name: "Genres",
-    selector: "genres",
+    selector: (row)=>row.genres,
     sortable: true,
     cell: (d) => <span>{d.genres.join(", ")}</span>
   },
   {
     name: "Year",
-    selector: "year",
+    selector: (row)=>row.year,
     sortable: true
   },
   {
     name: "Action",
     sortable: false,
-    selector: "null",
+    selector: (row)=>row.action,
     cell: (d) => [
       <i
         key={d.title}
