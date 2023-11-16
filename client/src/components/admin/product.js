@@ -42,7 +42,7 @@ const Product = () => {
       <button onClick={handlePrint}>Print Selected Rows</button>
       <DataTableExtensions
         {...tableData}
-        export={false} // Disable default export functionality
+        export={false}
       >
         <DataTable
           columns={columns}
