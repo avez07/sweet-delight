@@ -7,47 +7,48 @@ const handleClick = (title) => {
 export const columns = [
   {
     name: "Title",
-    selector: (row)=>row.title,
-    sortable: true
+    selector: "title", // Assuming 'title' is a property in your data objects
+    sortable: true,
   },
   {
     name: "Director",
-    selector: (row)=>row.director,
+    selector: "director", // Assuming 'director' is a property in your data objects
     sortable: true,
     cell: (d) => (
       <a href="https://google.com" target="_blank" rel="noreferrer" className="dlink">
         {d.director}
       </a>
-    )
+    ),
   },
   {
     name: "Genres",
-    selector: (row)=>row.genres,
+    selector: "genres", // Assuming 'genres' is an array property in your data objects
     sortable: true,
-    cell: (d) => <span>{d.genres.join(", ")}</span>
+    cell: (d) => <span>{d.genres.join(", ")}</span>,
   },
   {
     name: "Year",
-    selector: (row)=>row.year,
-    sortable: true
+    selector: "year", // Assuming 'year' is a property in your data objects
+    sortable: true,
   },
   {
     name: "Action",
     sortable: false,
-    selector: (row)=>row.action,
+    selector: "action", // Assuming 'action' is a property in your data objects
     cell: (d) => [
       <i
         key={d.title}
-        onClick={handleClick.bind(this, d.title)}
+        onClick={() => handleClick(d.title)}
         className="first fas fa-pen"
       ></i>,
       <i
-        onClick={handleClick.bind(this, d.title)}
+        onClick={() => handleClick(d.title)}
         className="fas fa-trash-alt"
-      ></i>
-    ]
-  }
+      ></i>,
+    ],
+  },
 ];
+
 
 export const data = [
   {

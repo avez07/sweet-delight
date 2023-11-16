@@ -1,54 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import AddToDriveIcon from '@mui/icons-material/AddToDrive';
 import DataTableExtensions from "react-data-table-component-extensions";
 import "react-data-table-component-extensions/dist/index.css";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
 
 import { columns, data } from "./data";
-import "../../css/datatable.css"
+import "../../css/datatable.css";
 
-// const customStyles = {
-//   headCells: {
-//     style: {
-//       backgroundColor: "#000000",
-//       boxShadow: "0 3px 5px 0.3px #0000001a",
-//       backdropFilter: "blur(8px) !important",
-//       color: "#b8bbc3",
-//     },
-//   },
-//   cells: {
-//     style: {
-//       backgroundColor: "#24293726 !important",
-//       boxShadow: "0 3px 5px 0.3px #0000001a",
-//       backdropFilter: "blur(8px) !important",
-//       color: "#b8bbc3",
-//     },
-//   },
-//   pagination: {
-//     style: {
-//       backgroundColor: "#24293726",
-//       boxShadow: "0 3px 5px 0.3px #0000001a",
-//       backdropFilter: "blur(8px) !important",
-//       color: "#b8bbc3",
-//     },
-//   },
-//   // Add more styles as needed
-// };
-const Product = ()=>{
+const Product = () => {
+  const [selectedRows, setSelectedRows] = useState([]);
+
+  const handleChange = (state) => {
+    setSelectedRows(state.selectedRows);
+  };
+
   const tableData = {
     columns,
-    data
+    data,
+  };
+
+  const handlePrint = () => {
+    const doc = new jsPDF();
+
+    const tableColumnNames = columns.map((col) => col.name);
+    const tableBody = selectedRows.map((row) =>
+      columns.map((col) => (typeof col.selector === "function" ? col.selector(row) : row[col.selector]))
+    );
+
+    doc.autoTable({
+      head: [tableColumnNames],
+      body: tableBody,
+    });
+
+    doc.save("selectedRows.pdf");
   };
 
   return (
     <div className="main">
-      <DataTableExtensions {...tableData}>
+      <button onClick={handlePrint}>Print Selected Rows</button>
+      <DataTableExtensions
+        {...tableData}
+        export={false} // Disable default export functionality
+      >
         <DataTable
           columns={columns}
           data={data}
           noHeader
           defaultSortField="id"
-          sortIcon={<AddToDriveIcon  key="sortIcon"/>}
+          sortIcon={<AddToDriveIcon key="sortIcon" />}
           defaultSortAsc={true}
           pagination
           selectableRows
@@ -57,10 +58,12 @@ const Product = ()=>{
           selectableRowsVisibleOnly
           highlightOnHover
           dense
+          onSelectedRowsChange={handleChange}
         />
       </DataTableExtensions>
+      
     </div>
   );
-}
+};
 
 export default Product;
