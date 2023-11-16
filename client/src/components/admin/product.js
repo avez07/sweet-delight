@@ -1,40 +1,36 @@
 import React from "react";
-import DataTable from 'react-data-table-component';
+import DataTable from "react-data-table-component";
+// import SortIcon from "@mui/icons-material";
+import DataTableExtensions from "react-data-table-component-extensions";
+import "react-data-table-component-extensions/dist/index.css";
 
-const Product = () => {
-    
-    const columns = [
-        {
-            name: 'Title',
-            selector: row => row.title,
-            sortable: true,
-        },
-        {
-            name: 'Year',
-            selector: row => row.year,
-            sortable: true,
-        },
-    ];
-    const data = [
-        {
-            id: 1,
-            title: 'Beetlejuice',
-            year: '1988',
-        },
-        {
-            id: 2,
-            title: 'Ghostbusters',
-            year: '1984',
-        },
-    ]
+import { columns, data } from "./data";
 
-    return (
-        <> <DataTable
-        columns={columns}
-        data={data}
-    /></>
-    );
+import "../../css/datatable.css"
+
+const Product = ()=>{
+  const tableData = {
+    columns,
+    data
+  };
+
+  return (
+    <div className="main">
+      <DataTableExtensions {...tableData}>
+        <DataTable
+          columns={columns}
+          data={data}
+          noHeader
+          defaultSortField="id"
+          sortIcon={'t'}
+          defaultSortAsc={true}
+          pagination
+          highlightOnHover
+          dense
+        />
+      </DataTableExtensions>
+    </div>
+  );
 }
 
 export default Product;
-
