@@ -7,12 +7,12 @@ const handleClick = (title) => {
 export const columns = [
   {
     name: "Title",
-    selector: "title", // Assuming 'title' is a property in your data objects
+    selector: (row)=>row.tittle, // Assuming 'title' is a property in your data objects
     sortable: true,
   },
   {
     name: "Director",
-    selector: "director", // Assuming 'director' is a property in your data objects
+    selector: (row)=>row.director, // Assuming 'director' is a property in your data objects
     sortable: true,
     cell: (d) => (
       <a href="https://google.com" target="_blank" rel="noreferrer" className="dlink">
@@ -22,19 +22,19 @@ export const columns = [
   },
   {
     name: "Genres",
-    selector: "genres", // Assuming 'genres' is an array property in your data objects
+    selector: (row)=>row.genres, // Assuming 'genres' is an array property in your data objects
     sortable: true,
     cell: (d) => <span>{d.genres.join(", ")}</span>,
   },
   {
     name: "Year",
-    selector: "year", // Assuming 'year' is a property in your data objects
+    selector: (row)=>row.year, // Assuming 'year' is a property in your data objects
     sortable: true,
   },
   {
     name: "Action",
     sortable: false,
-    selector: "action", // Assuming 'action' is a property in your data objects
+    selector: (row)=>row.action, // Assuming 'action' is a property in your data objects
     cell: (d) => [
       <i
         key={d.title}
