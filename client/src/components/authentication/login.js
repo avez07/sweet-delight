@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { AuthContext } from "./auth";
+import {Redirect} from "react-router-dom"
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import IconButton from "@mui/material/IconButton";
@@ -11,6 +12,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 
 function Login() {
+ const {authenticate} = useContext(AuthContext)
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
@@ -43,7 +45,8 @@ function Login() {
       const response = await axios.post(apiUrl, data, { headers: header });
 
       if (response.status === 200) {
-        localStorage.setItem('token', response.data);       
+        localStorage.setItem('token', response.data);  
+        await authenticate();     
           setRedirect(true);
        
       } else {
@@ -57,7 +60,8 @@ function Login() {
   };
 
   if (redirect) {
-    return <Redirect to="/" />;
+    
+    return <Redirect to='/'/>;
   }
 
   const action = (

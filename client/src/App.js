@@ -33,7 +33,7 @@ function App() {
 
                 </Switch>
               </Layout>
-            ) : isAuthenticated === 3 ? (
+            ) : isAuthenticated === 3 || isAuthenticated === 0 ? (
               <div>
                 <Header />
                 <Switch>
