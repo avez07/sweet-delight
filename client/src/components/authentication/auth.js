@@ -9,10 +9,10 @@ export const AuthProvider = ({ children }) => {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
 
-
   // Your authentication logic
   const authenticate = async () => {
-    const storedToken = localStorage.getItem("token");
+    
+    const storedToken =  localStorage.getItem("token");
     if (storedToken) {
       const url = process.env.REACT_APP_URL + "api/verify";
       const data = storedToken;
@@ -20,18 +20,23 @@ export const AuthProvider = ({ children }) => {
         Authorization: data,
       };
       const response = await axios.get(url, { headers: header });
-      console.log(response);
-      const {name,email,role,login_id} = response.data      
-      setName(name)
-      setEmail(email)
-      setIsAuthenticated(role);
-      setLogin_id(login_id)
+      // console.log(response)
+      if (response.status === 200) {
+        const { name, email, role, login_id } = response.data;
+        setName(name);
+        setEmail(email);
+        setIsAuthenticated(role);
+        setLogin_id(login_id);
+      } else {
+        setIsAuthenticated(3);
+      }
     } else {
+     
       setIsAuthenticated(null);
-      setName(null)
-      setEmail(null)
-      setIsAuthenticated(3);
-      setLogin_id(null)
+      setName(null);
+      setEmail(null);
+      setIsAuthenticated(0);
+      setLogin_id(null);
     }
   };
 
@@ -40,7 +45,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated,login_id,name,email}}>
+    <AuthContext.Provider value={{ isAuthenticated, login_id, name, email }}>
       {children}
     </AuthContext.Provider>
   );

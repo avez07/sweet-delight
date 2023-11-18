@@ -11,12 +11,15 @@ const login = async (req, res) => {
   try {
     const collection = db.collection("user_login");
     const response = await collection.find(data).toArray();
-    const response_data = {
-      name: response[0].name,
-      email: response[0].email,
-      login_id: response[0].login_id,
-      role: response[0].role,
-    };
+
+    if (response.length === 0) {
+      res.status(201).send("User not valid");
+      return false;
+    }
+
+    const { name, email, login_id, role } = response[0];
+    const response_data = { name, email, login_id, role };
+
     const JWTToken = Jwt.sign(response_data, serect_key, { expiresIn: 86400 });
     res.status(200).send(JWTToken);
   } catch (error) {
@@ -29,13 +32,11 @@ const verify_token = async (req, res) => {
   try {
     const response = Jwt.verify(data, serect_key, true);
     res.status(200).send(response);
-
   } catch (error) {
-    if (error.name === 'TokenExpiredError') {
-      res.status(201).send("Token Expired");    
-    } else {     
+    if (error.name === "TokenExpiredError") {
+      res.status(201).send("Token Expired");
+    } else {
       res.status(201).send("Token Not Valid");
-
     }
   }
 };

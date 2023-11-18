@@ -202,8 +202,11 @@ fill: #b8bbc3 !important;
     font-size: 22px;
 }
 .table-head{
-    color: #e5e5e5;
+    
     font-size: 40px;
     text-align: left;
     font-weight: 600;
+}
+.content-night .table-head{
+    color: #e5e5e5;
 }
