@@ -11,8 +11,10 @@ import Signup from "./components/authentication/signup";
 import "../src/css/App.css";
 import "../src/css/style.css";
 import Layout from "./components/common/admin-layout";
+import SellLayout from "./components/common/seller-layout";
 import AdminHome from "./components/admin/home";
 import Product from "./components/admin/product";
+import SellerHome from "./components/seller/home";
 
 
 function App() {
@@ -33,7 +35,16 @@ function App() {
 
                 </Switch>
               </Layout>
-            ) : isAuthenticated === 3 || isAuthenticated === 0 ? (
+            ) : isAuthenticated === 2 ? (
+              <SellLayout>
+              <Switch>
+                <Route exact path="/" component={SellerHome} />
+                <Route path="/product" component={Product} />
+
+              </Switch>
+            </SellLayout>
+
+            ): isAuthenticated === 3 || isAuthenticated === 0 ? (
               <div>
                 <Header />
                 <Switch>

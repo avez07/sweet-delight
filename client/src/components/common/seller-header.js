@@ -18,7 +18,8 @@ import { IoLanguageSharp } from "react-icons/io5";
 
 function AdminNav({ toggleSidebar,toggleNightMode,isNightMode }) {
   const {name} = useContext(AuthContext);
-  const currentDate = new Date().toLocaleDateString();
+  const options = { day: '2-digit', month: 'short', year: 'numeric' };
+  const currentDate = new Date().toLocaleDateString('en-GB', options);
   return (
     <Navbar className={`bg-body-tertiary admin-navbar ${isNightMode?'night-mode-nav':''}`}>
       <Container fluid>
