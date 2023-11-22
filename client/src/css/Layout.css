@@ -210,3 +210,15 @@ fill: #b8bbc3 !important;
 .content-night .table-head{
     color: #e5e5e5;
 }
+.product-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;   
+}
+.content-night .action-btn button{
+    border-color: #b8bbc3 !important;
+    color: #b8bbc3;
+}

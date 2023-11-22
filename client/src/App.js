@@ -15,6 +15,7 @@ import SellLayout from "./components/common/seller-layout";
 import AdminHome from "./components/admin/home";
 import Product from "./components/admin/product";
 import SellerHome from "./components/seller/home";
+import ManageProduct from "./components/seller/manage-product";
 
 
 function App() {
@@ -39,7 +40,9 @@ function App() {
               <SellLayout>
               <Switch>
                 <Route exact path="/" component={SellerHome} />
-                <Route path="/product" component={Product} />
+                <Route path="/manage-product" component={ManageProduct} />
+                <Route path="/manage-product/detail" component={ManageProduct} />
+
 
               </Switch>
             </SellLayout>
