@@ -8,12 +8,15 @@ import { NavLink } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import deco_cake from "../assets/product_store/choclate.webp";
-import { FaThumbsUp } from "react-icons/fa";
+import { FaThumbsUp,FaPlus } from "react-icons/fa";
 
 function ManageProduct() {
   return (
     <>
       <Container fluid>
+        <div className="d-flex justify-content-end mb-3">
+      <NavLink to="/add-product"><Button variant="secondary"><span><FaPlus /></span> Add Product</Button></NavLink>
+        </div>
         <Row xs={1} md={1} className="g-4">
           {Array.from({ length: 4 }).map((_, idx) => (
             <Col key={idx}>
@@ -53,7 +56,7 @@ function ManageProduct() {
                     <div style={{ width: "20%" }}>
                       <p className="fw-bold text-center">Actions</p>
                       <div className="d-flex justify-content-around action-btn">
-                      <NavLink to="/bulk-edit"><Button variant="outline-dark">Bulk Edit</Button></NavLink>
+                      <NavLink to="/add-product"><Button variant="outline-dark">Bulk Edit</Button></NavLink>
                       <NavLink to="/"><Button variant="outline-dark">Delete</Button></NavLink>
                       </div>                    
                     </div>

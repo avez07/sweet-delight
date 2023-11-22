@@ -42,7 +42,7 @@ function App() {
               <Switch>
                 <Route exact path="/" component={SellerHome} />
                 <Route path="/manage-product" component={ManageProduct} />
-                <Route  path="/bulk-edit" component={BulkEdit} />
+                <Route  path="/add-product" component={BulkEdit} />
 
 
               </Switch>
