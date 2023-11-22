@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Badge from "react-bootstrap/Badge";
 import Button from 'react-bootstrap/Button';
+import { NavLink } from "react-router-dom";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -52,8 +53,8 @@ function ManageProduct() {
                     <div style={{ width: "20%" }}>
                       <p className="fw-bold text-center">Actions</p>
                       <div className="d-flex justify-content-around action-btn">
-                      <Button variant="outline-dark">Bulk Edit</Button>{' '}
-                      <Button variant="outline-dark">Delete</Button>{' '}
+                      <NavLink to="/bulk-edit"><Button variant="outline-dark">Bulk Edit</Button></NavLink>
+                      <NavLink to="/"><Button variant="outline-dark">Delete</Button></NavLink>
                       </div>                    
                     </div>
                     <div style={{ width: "10%" }}>

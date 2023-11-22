@@ -16,6 +16,7 @@ import AdminHome from "./components/admin/home";
 import Product from "./components/admin/product";
 import SellerHome from "./components/seller/home";
 import ManageProduct from "./components/seller/manage-product";
+import BulkEdit from "./components/seller/bulk-edit";
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
               <Switch>
                 <Route exact path="/" component={SellerHome} />
                 <Route path="/manage-product" component={ManageProduct} />
-                <Route path="/manage-product/detail" component={ManageProduct} />
+                <Route  path="/bulk-edit" component={BulkEdit} />
 
 
               </Switch>

@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
         setIsAuthenticated(role);
         setLogin_id(login_id);
       } else {
-        setIsAuthenticated(2);
+        setIsAuthenticated(0);
       }
     } else {
      
