@@ -222,3 +222,37 @@ fill: #b8bbc3 !important;
     border-color: #b8bbc3 !important;
     color: #b8bbc3;
 }
+/* discription quil style  */
+.content-night .ql-snow .ql-picker ,
+.content-night .ql-snow .ql-stroke,
+.content-night .ql-editor{
+    color: #e4e5e8 !important;
+    stroke: #e4e5e8 !important;
+}
+ .content-night .add-name{
+    background: #1a202e!important;
+    border: none !important;
+    color: #b8bbc3!important;
+}
+.content-night .add-name::placeholder{
+    color: #8a8b8f!important;
+}
+.ql-editor{
+   min-height: 250px !important;
+}
+.content-night .quill, .content-night .ql-toolbar.ql-snow , .content-night .ql-editor, .content-night .ql-toolbar.ql-snow {
+    background :#1a202e!important;
+    border: 0.5px solid #626262 !important;
+
+}
+.content-night .ql-container.ql-snow {
+    border: none !important;
+}
+.content-night .inputgroup-text{
+    background:#565656;
+    border: none !important;
+    color: #b8bbc3;
+    font-weight: 600;
+
+
+}
