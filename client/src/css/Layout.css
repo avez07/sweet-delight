@@ -248,7 +248,7 @@ fill: #b8bbc3 !important;
 .content-night .ql-container.ql-snow {
     border: none !important;
 }
-.content-night .inputgroup-text{
+.content-night .inputgroup-text , .content-night .checkbox span{
     background:#565656;
     border: none !important;
     color: #b8bbc3;
