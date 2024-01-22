@@ -40,5 +40,12 @@ const verify_token = async (req, res) => {
     }
   }
 };
+const testAPI = (req,res)=>{
+  const array = {
+    name:'avez',
+    age:'21',
+  }
+  res.status(200).send(array);
+}
 
-export default { login, verify_token };
+export default { login, verify_token ,testAPI};

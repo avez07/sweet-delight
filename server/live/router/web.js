@@ -7,6 +7,8 @@ const router = express.Router();
 
 router.post('/login',Auth.login)
 router.get('/verify',Auth.verify_token)
+router.post('/test',Auth.testAPI)
+
 
 
 export default router
