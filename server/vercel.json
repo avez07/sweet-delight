@@ -1,12 +1,12 @@
 {
     "functions": {
-      "api/**/*.js": {
+      "live/router/**/*.js": {
         "runtime": "vercel-node@2.4.0"
       }
     },
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/api/.*",
         "dest": "/index.js"
       }
     ]
