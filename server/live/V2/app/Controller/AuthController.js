@@ -7,7 +7,7 @@ const serect_key = process.env.SERECT_KEY;
 
 const login = async (req, res) => {
   const data = req.body;
-  const head = req.headers;
+  // const head = req.headers;
   try {
     const collection = db.collection("user_login");
     const response = await collection.find(data).toArray();
@@ -19,7 +19,7 @@ const login = async (req, res) => {
 
     const { name, email, login_id, role } = response[0];
     const response_data = { name, email, login_id, role };
-
+console.log(response_data)
     const JWTToken = Jwt.sign(response_data, serect_key, { expiresIn: 86400 });
     res.status(200).send(JWTToken);
   } catch (error) {

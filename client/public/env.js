@@ -61,7 +61,8 @@ window.env = {
   "PROMPT": "$P$G",
   "PSModulePath": "C:\\Users\\Tech Team\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
   "PUBLIC": "C:\\Users\\Public",
-  "REACT_APP_URL": "https://sweet-delight.vercel.app/",
+  "REACT_APP_SECRET_KEY": "234555",
+  "REACT_APP_URL": "http://localhost:8000/",
   "SESSIONNAME": "Console",
   "SystemDrive": "C:",
   "SystemRoot": "C:\\Windows",
@@ -78,6 +79,6 @@ window.env = {
   "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\Tech Team\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
   "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-5f604f5c28-sock",
   "VSCODE_INJECTION": "1",
-  "VSCODE_NONCE": "c72268b1-a35b-488b-9b73-0c701249ddce",
+  "VSCODE_NONCE": "aa377243-7d1c-4a2a-b2d5-7a4e4b430087",
   "windir": "C:\\Windows"
 };
