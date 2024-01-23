@@ -9,13 +9,13 @@ app.use(express.json());
 app.use(cors());
 
 // Use a specific route for the API
-// app.use('/api', router);
-console.log(process.env.MONGODB_URI)
+app.use('/api', router);
+// console.log(process.env.MONGODB_URI)
 
 // Handle other routes or methods here if needed
 app.post('*', (req, res) => {
   res.json('hello world');
 });
-
+app.listen(process.env.PORT)
 // Export the Express app for Vercel
 export default app;
