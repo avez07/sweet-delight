@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 // Use a specific route for the API
-app.use('/api', router);
+// app.use('/api', router);
 
 // Handle other routes or methods here if needed
 app.all('*', (req, res) => {
