@@ -14,7 +14,9 @@ app.use(cors(
     }
 ));
 const port = process.env.PORT;
-
+app.get('/test2',(req,res)=>{
+    res.send('hello world')
+})
 app.use('/api',router);
 app.listen(port);
 
