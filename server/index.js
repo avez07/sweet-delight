@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import router from './live/router/web.js';
+// import router from './live/router/web.js';
 import cors from 'cors';
 
 dotenv.config();
@@ -12,7 +12,7 @@ app.use(cors());
 // app.use('/api', router);
 
 // Handle other routes or methods here if needed
-app.all('/', (req, res) => {
+app.post('/', (req, res) => {
   res.json('hello world');
 });
 
