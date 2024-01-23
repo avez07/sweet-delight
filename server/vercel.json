@@ -1,6 +1,6 @@
 {
     "functions": {
-      "live/router/**/*.js": {
+      "live/V2/Controller/*.js": {
         "runtime": "vercel-node@2.4.0"
       }
     },
