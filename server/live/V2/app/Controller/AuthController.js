@@ -45,7 +45,7 @@ const testAPI = (req,res)=>{
     name:'avez',
     age:'21',
   }
-  res.status(200).send(array);
+  res.json(array);
 }
 
 export default { login, verify_token ,testAPI};
