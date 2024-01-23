@@ -12,8 +12,8 @@ app.use(cors());
 // app.use('/api', router);
 
 // Handle other routes or methods here if needed
-app.all('*', (req, res) => {
-  res.json({ message: 'Not Found' });
+app.all('/', (req, res) => {
+  res.json('hello world');
 });
 
 // Export the Express app for Vercel
