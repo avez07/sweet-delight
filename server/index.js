@@ -8,15 +8,13 @@ const app = express();
 app.use(express.json());
 app.use(cors(
     {
-        origin:[""],
+        origin:["https://sweetdelight.netlify.app"],
         methods:["POST","GET"],
         credentials:true
     }
 ));
 const port = process.env.PORT;
-app.get('/',(req,res)=>{
-    res.send('hello world')
-})
+
 app.use('/api',router);
 app.listen(port);
 

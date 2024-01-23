@@ -43,6 +43,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     authenticate();
   }, []);
+  console.log(process.env.REACT_APP_URL)
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, login_id, name, email,authenticate }}>
