@@ -13,7 +13,7 @@ app.use(cors());
 
 // Handle other routes or methods here if needed
 app.all('*', (req, res) => {
-  res.status(404).json({ message: 'Not Found' });
+  res.json({ message: 'Not Found' });
 });
 
 // Export the Express app for Vercel
