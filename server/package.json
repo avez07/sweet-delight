@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack --config webpack.config.js --mode production",
-    "start:dev" : "node ./dev-build/main.cjs"
+    "start:dev": "node ./dev-build/main.cjs"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,8 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.6.4",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "vercel": "^33.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
